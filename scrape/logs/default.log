@@ -1,0 +1,944 @@
+2020-05-18 17:49:31 [scrapy.utils.log] INFO: Scrapy 2.1.0 started (bot: scrape)
+2020-05-18 17:49:31 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.10, cssselect 1.1.0, parsel 1.6.0, w3lib 1.21.0, Twisted 20.3.0, Python 3.8.2 (default, Apr 27 2020, 15:53:34) - [GCC 9.3.0], pyOpenSSL 19.1.0 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 2.9.2, Platform Linux-5.4.0-29-generic-x86_64-with-glibc2.29
+2020-05-18 17:49:31 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+2020-05-18 17:49:31 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'scrape',
+ 'LOG_FILE': './scrape/logs/default.log',
+ 'NEWSPIDER_MODULE': 'scrape.spiders',
+ 'SPIDER_MODULES': ['scrape.spiders']}
+2020-05-18 17:49:31 [scrapy.extensions.telnet] INFO: Telnet Password: ab7096d1a4173799
+2020-05-18 17:49:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-05-18 17:49:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-05-18 17:49:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-05-18 17:49:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrape.pipelines.QuotePipelineAddDate',
+ 'scrape.pipelines.QuotePipelineDbInsert']
+2020-05-18 17:49:31 [scrapy.core.engine] INFO: Spider opened
+2020-05-18 17:49:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-05-18 17:49:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2020-05-18 17:49:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://quotes.toscrape.com/> (referer: None)
+2020-05-18 17:49:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Albert Einstein',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'THE WORLD AS WE HAVE CREATED IT IS A PROCESS OF OUR THINKING. IT '
+          'CANNOT BE CHANGED WITHOUT CHANGING OUR THINKING.'}
+2020-05-18 17:49:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'J.K. Rowling',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'IT IS OUR CHOICES, HARRY, THAT SHOW WHAT WE TRULY ARE, FAR MORE '
+          'THAN OUR ABILITIES.'}
+2020-05-18 17:49:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Albert Einstein',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'THERE ARE ONLY TWO WAYS TO LIVE YOUR LIFE. ONE IS AS THOUGH NOTHING '
+          'IS A MIRACLE. THE OTHER IS AS THOUGH EVERYTHING IS A MIRACLE.'}
+2020-05-18 17:49:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Jane Austen',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'THE PERSON, BE IT GENTLEMAN OR LADY, WHO HAS NOT PLEASURE IN A GOOD '
+          'NOVEL, MUST BE INTOLERABLY STUPID.'}
+2020-05-18 17:49:33 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Marilyn Monroe',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': "IMPERFECTION IS BEAUTY, MADNESS IS GENIUS AND IT'S BETTER TO BE "
+          'ABSOLUTELY RIDICULOUS THAN ABSOLUTELY BORING.'}
+2020-05-18 17:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Albert Einstein',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'TRY NOT TO BECOME A MAN OF SUCCESS. RATHER BECOME A MAN OF VALUE.'}
+2020-05-18 17:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'André Gide',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'IT IS BETTER TO BE HATED FOR WHAT YOU ARE THAN TO BE LOVED FOR WHAT '
+          'YOU ARE NOT.'}
+2020-05-18 17:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Thomas A. Edison',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': "I HAVE NOT FAILED. I'VE JUST FOUND 10,000 WAYS THAT WON'T WORK."}
+2020-05-18 17:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Eleanor Roosevelt',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'A WOMAN IS LIKE A TEA BAG; YOU NEVER KNOW HOW STRONG IT IS UNTIL '
+          "IT'S IN HOT WATER."}
+2020-05-18 17:49:34 [scrapy.core.scraper] DEBUG: Scraped from <200 http://quotes.toscrape.com/>
+{'by': 'Steve Martin',
+ 'date': datetime.date(2020, 5, 18),
+ 'quote': 'A DAY WITHOUT SUNSHINE IS LIKE, YOU KNOW, NIGHT.'}
+2020-05-18 17:49:34 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-05-18 17:49:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 219,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 2342,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 2.046717,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 5, 18, 23, 49, 34, 587298),
+ 'item_scraped_count': 10,
+ 'log_count/DEBUG': 11,
+ 'log_count/INFO': 10,
+ 'memusage/max': 1405816832,
+ 'memusage/startup': 1405816832,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2020, 5, 18, 23, 49, 32, 540581)}
+2020-05-18 17:49:34 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-05-19 14:58:02 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-05-19 14:58:02 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 87, in crawl
+    self.engine = self._create_engine()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 101, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/downloader/__init__.py", line 83, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/middleware.py", line 35, in from_settings
+    mw = create_instance(mwcls, settings, crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/misc.py", line 146, in create_instance
+    return objcls.from_crawler(crawler, *args, **kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/middlewares.py", line 67, in from_crawler
+    middleware = cls(
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/middlewares.py", line 51, in __init__
+    self.driver = driver_klass(**driver_kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 83
+
+2020-05-19 15:00:54 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 17, in start_requests
+    yield SeleniumRequest(url=url, callback=self.parse)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/http.py", line 32, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 69, in _set_url
+    raise ValueError('Missing scheme in request url: %s' % self._url)
+ValueError: Missing scheme in request url: www.hello.com
+2020-05-19 15:03:47 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 17, in start_requests
+    yield SeleniumRequest(url=url, callback=self.parse)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/http.py", line 32, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 69, in _set_url
+    raise ValueError('Missing scheme in request url: %s' % self._url)
+ValueError: Missing scheme in request url: www.hello.com
+2020-05-19 15:18:01 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 17, in start_requests
+    yield SeleniumRequest(url=url, callback=self.parse)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/http.py", line 32, in __init__
+    super().__init__(*args, **kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 25, in __init__
+    self._set_url(url)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/request/__init__.py", line 69, in _set_url
+    raise ValueError('Missing scheme in request url: %s' % self._url)
+ValueError: Missing scheme in request url: www.hello.com
+2020-05-19 15:26:08 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method RefererMiddleware.request_scheduled of <scrapy.spidermiddlewares.referer.RefererMiddleware object at 0x7fa44ce759d0>>
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/signal.py", line 31, in send_catch_log
+    response = robustApply(receiver, signal=signal, sender=sender,
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 342, in request_scheduled
+    redirected_urls = request.meta.get('redirect_urls', [])
+AttributeError: 'NoneType' object has no attribute 'meta'
+2020-05-19 15:26:08 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/commands/crawl.py", line 47, in run
+    self.crawler_process.start()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 327, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 1283, in run
+    self.mainLoop()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/reactor.py", line 50, in __call__
+    return self._func(*self._a, **self._kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 137, in _next_request
+    self.crawl(request, spider)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 216, in crawl
+    self.schedule(request, spider)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 222, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/scheduler.py", line 90, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+builtins.AttributeError: 'NoneType' object has no attribute 'dont_filter'
+
+2020-05-22 14:44:24 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-05-22 14:44:24 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 87, in crawl
+    self.engine = self._create_engine()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 101, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/downloader/__init__.py", line 83, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/middleware.py", line 35, in from_settings
+    mw = create_instance(mwcls, settings, crawler)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/misc.py", line 146, in create_instance
+    return objcls.from_crawler(crawler, *args, **kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/middlewares.py", line 67, in from_crawler
+    middleware = cls(
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/middlewares.py", line 51, in __init__
+    self.driver = driver_klass(**driver_kwargs)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/chrome/webdriver.py", line 76, in __init__
+    RemoteWebDriver.__init__(
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81
+
+2020-05-22 15:23:43 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 40, in parse
+    next_button.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 15:26:19 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 40, in parse
+    next_button.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 15:31:06 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 40, in parse
+    next_button.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 15:34:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 41, in parse
+    next_button.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 15:55:23 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 37, in parse
+    il.add_css('quote', '.text::text')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 207, in add_css
+    values = self._get_cssvalues(css, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in _get_cssvalues
+    return flatten(self.selector.css(css).getall() for css in csss)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 33, in flatten
+    return list(iflatten(x))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 40, in iflatten
+    for el in x:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in <genexpr>
+    return flatten(self.selector.css(css).getall() for css in csss)
+AttributeError: 'WebElement' object has no attribute 'css'
+2020-05-22 15:55:53 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 37, in parse
+    il.add_css('quote', '.text::text')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 207, in add_css
+    values = self._get_cssvalues(css, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in _get_cssvalues
+    return flatten(self.selector.css(css).getall() for css in csss)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 33, in flatten
+    return list(iflatten(x))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 40, in iflatten
+    for el in x:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in <genexpr>
+    return flatten(self.selector.css(css).getall() for css in csss)
+AttributeError: 'WebElement' object has no attribute 'css'
+2020-05-22 15:56:33 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 37, in parse
+    il.add_css('quote', '.text::text')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 207, in add_css
+    values = self._get_cssvalues(css, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in _get_cssvalues
+    return flatten(self.selector.css(css).getall() for css in csss)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 33, in flatten
+    return list(iflatten(x))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 40, in iflatten
+    for el in x:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/loader/__init__.py", line 221, in <genexpr>
+    return flatten(self.selector.css(css).getall() for css in csss)
+AttributeError: 'WebElement' object has no attribute 'css'
+2020-05-22 16:50:46 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 20, in start_requests
+    yield HtmlResponse(url=url, callback=self.parse)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/response/text.py", line 32, in __init__
+    super(TextResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'callback'
+2020-05-22 16:50:59 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 20, in start_requests
+    yield HtmlResponse(url=url, callback=self.parse_page)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/http/response/text.py", line 32, in __init__
+    super(TextResponse, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'callback'
+2020-05-22 16:55:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spiders/__init__.py", line 90, in parse
+    raise NotImplementedError('{}.parse callback is not defined'.format(self.__class__.__name__))
+NotImplementedError: QuotesSpider.parse callback is not defined
+2020-05-22 16:55:33 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 42, in parse
+    next.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 16:55:59 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 42, in parse
+    next.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:05:14 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 43, in parse
+    next.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:07:30 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 44, in parse
+    next.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:14:45 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 35, in parse
+    sel = Selector(quote.get_attribute('outerHTML'))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/selector/unified.py", line 78, in __init__
+    text = response.text
+AttributeError: 'str' object has no attribute 'text'
+2020-05-22 17:16:16 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 46, in parse
+    next.click()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable: element has zero size
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:19:56 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 32, in parse
+    next = self.driver.find_element_by_css_selector('.next > a')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 598, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".next > a"}
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:25:03 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 32, in parse
+    next = self.driver.find_element_by_css_selector('.next > a')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 598, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".next > a"}
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-22 17:27:42 [scrapy.core.scraper] ERROR: Spider error processing <GET http://quotes.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/quotes.py", line 33, in parse
+    next = self.driver.find_element_by_css_selector('.next > a')
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 598, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".next > a"}
+  (Session info: headless chrome=83.0.4103.61)
+
+2020-05-23 16:15:08 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://eweb.washco.utah.gov:8080/recorder/web/login.jsp>
+2020-05-23 16:15:10 [urllib3.connectionpool] WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb5909f85b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09036b2ab3105e81b0bdebfd285acbc5
+2020-05-23 16:15:10 [urllib3.connectionpool] WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb58f5a62b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09036b2ab3105e81b0bdebfd285acbc5
+2020-05-23 16:15:10 [urllib3.connectionpool] WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb58f5a6400>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/09036b2ab3105e81b0bdebfd285acbc5
+2020-05-23 16:16:23 [scrapy.core.scraper] ERROR: Spider must return Request, BaseItem, dict or None, got 'str' in <GET http://eweb.washco.utah.gov:8080/recorder/web/login.jsp>
+2020-05-23 16:19:16 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/login.jsp> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 13, in parse
+    yield SeleniumRequest(url=self.login_url, callback=self.public_login)
+AttributeError: 'WashingtonUtSpider' object has no attribute 'login_url'
+2020-05-23 16:23:02 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/login.jsp> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/defer.py", line 117, in iter_errback
+    yield next(it)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/python.py", line 345, in __next__
+    return next(self.data)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 338, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/spidermw.py", line 64, in _evaluate_iterable
+    for r in iterable:
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 13, in parse
+    yield SeleniumRequest(callback=self.public_login)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy_selenium/http.py", line 32, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'url'
+2020-05-23 16:37:19 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method RefererMiddleware.request_scheduled of <scrapy.spidermiddlewares.referer.RefererMiddleware object at 0x7fc7c16c86d0>>
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/signal.py", line 31, in send_catch_log
+    response = robustApply(receiver, signal=signal, sender=sender,
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/spidermiddlewares/referer.py", line 342, in request_scheduled
+    redirected_urls = request.meta.get('redirect_urls', [])
+AttributeError: 'str' object has no attribute 'meta'
+2020-05-23 16:37:19 [twisted] CRITICAL: Unhandled Error
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/commands/crawl.py", line 47, in run
+    self.crawler_process.start()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/crawler.py", line 327, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 1283, in run
+    self.mainLoop()
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 1292, in mainLoop
+    self.runUntilCurrent()
+--- <exception caught here> ---
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/base.py", line 913, in runUntilCurrent
+    call.func(*call.args, **call.kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/utils/reactor.py", line 50, in __call__
+    return self._func(*self._a, **self._kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 137, in _next_request
+    self.crawl(request, spider)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 216, in crawl
+    self.schedule(request, spider)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 222, in schedule
+    if not self.slot.scheduler.enqueue_request(request):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/scheduler.py", line 90, in enqueue_request
+    if not request.dont_filter and self.df.request_seen(request):
+builtins.AttributeError: 'str' object has no attribute 'dont_filter'
+
+2020-05-23 16:41:10 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/scrapy/core/engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 17, in start_requests
+    yield SeleniumRequest(url=url2, callback=self.parse)
+NameError: name 'url2' is not defined
+2020-05-23 16:47:42 [urllib3.connectionpool] WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd890c6c5b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1f3b63f9fe5adb0ba9712476c7f836dc
+2020-05-23 16:47:42 [urllib3.connectionpool] WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd88bfc0c70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1f3b63f9fe5adb0ba9712476c7f836dc
+2020-05-23 16:47:42 [urllib3.connectionpool] WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd88bfc0dc0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1f3b63f9fe5adb0ba9712476c7f836dc
+2020-05-23 19:47:25 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/loginPOST.jsp?submit=Public+Login&guest=true> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 20, in parse
+    inspect_response(response)
+TypeError: inspect_response() missing 1 required positional argument: 'spider'
+2020-05-23 19:47:41 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/loginPOST.jsp?submit=Public+Login&guest=true> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 20, in parse
+    inspect_response(response)
+TypeError: inspect_response() missing 1 required positional argument: 'spider'
+2020-05-23 20:33:20 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/loginPOST.jsp?submit=Public+Login&guest=true> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 23, in input_form
+    inspect_response(response)
+TypeError: inspect_response() missing 1 required positional argument: 'spider'
+2020-05-23 20:46:12 [scrapy.core.scraper] ERROR: Spider error processing <GET http://eweb.washco.utah.gov:8080/recorder/web/loginPOST.jsp?submit=Public+Login&guest=true> (referer: None)
+Traceback (most recent call last):
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/venv/lib/python3.8/site-packages/twisted/internet/defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/ben/Dropbox/PycharmProjects/recorder_db/scrape/spiders/washco_spider.py", line 22, in input_form
+    raise KeyError
+KeyError
