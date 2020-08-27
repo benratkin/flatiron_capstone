@@ -67,8 +67,7 @@ ben@Bucephalus:~/Dropbox/PycharmProjects/keyrenter$ git push -u origin master
 
 ### Pull code to EC2 with git
 
-### Make EBS volume larger to handle the database size (only necessary because I made it too small in the first place)
-      https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+### Make EBS volume larger to handle the database size
 
 ### Edit crontab for spider scheduler:
 Because this is a school project I chose to use a simple cronjob to schedule the scraping. If this had been a real business situation, Scrapy has functionality for less-hacky spider scheduling.
